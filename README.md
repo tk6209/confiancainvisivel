@@ -73,4 +73,4 @@ Mockup padrão: confiancainvisivel/confinv_mockup.png
 📬 Contato
 Para saber mais sobre o autor e suas publicações:
 
-👤 Vinicius Teixeira no LinkedIn
+👤 Vinicius Teixeira [LinkedIn](https://www.linkedin.com/in/viniciuseteixeira)

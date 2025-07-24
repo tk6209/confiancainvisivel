@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F2F4F7; /* Very light blue-grey, similar to document background */
+            background-color: #F8F8F8; /* Very light grey for overall background */
             color: #333333; /* Dark grey for text on light backgrounds */
             line-height: 1.6;
         }
@@ -26,14 +26,14 @@
         }
         .btn-primary {
             /* Solid Visa Blue for buttons */
-            background-color: #1A1F71;
+            background-color: #0052CC; /* Vibrant blue */
             transition: all 0.3s ease;
             color: #FFFFFF; /* White text for buttons */
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(26, 31, 113, 0.4);
-            background-color: #0052CC; /* Brighter blue on hover */
+            box-shadow: 0 4px 15px rgba(0, 82, 204, 0.4); /* Shadow with primary blue */
+            background-color: #1A1F71; /* Darker blue on hover */
         }
         .section-title {
             position: relative;
@@ -48,7 +48,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: #0052CC; /* Brighter Visa Blue for accent line */
+            background-color: #0052CC; /* Vibrant Visa Blue for accent line */
             border-radius: 2px;
         }
         details > summary {
@@ -84,7 +84,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: #0052CC; /* Solid bright Visa Blue */
+            background-color: #0052CC; /* Solid vibrant Visa Blue */
             color: #FFFFFF; /* White text for contrast */
             text-align: center;
             padding: 0.75rem 0;
@@ -93,11 +93,11 @@
         }
         /* Language selector buttons */
         .language-selector button {
-            background-color: #1A1F71; /* Visa Blue */
+            background-color: #1A1F71; /* Darker Visa Blue */
             color: #FFFFFF;
         }
         .language-selector button:hover {
-            background-color: #0052CC; /* Brighter Visa Blue */
+            background-color: #0052CC; /* Vibrant Visa Blue on hover */
         }
     </style>
 </head>
@@ -119,7 +119,7 @@
     <header class="relative bg-white text-gray-800 py-20 md:py-32 overflow-hidden shadow-md">
         <div class="absolute inset-0 z-0 opacity-5">
             <!-- Background pattern related to digital security - lighter version -->
-            <img src="https://placehold.co/1920x1080/FFFFFF/E0E0E0?text=Digital+Security+Pattern" alt="Digital Security Pattern" class="w-full h-full object-cover">
+            <img src="https://placehold.co/1920x1080/FFFFFF/E0E0E0?text=Digital+Security+Pattern" alt="Confiança invisível" class="w-full h-full object-cover">
         </div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
@@ -135,6 +135,14 @@
             </a>
         </div>
     </header>
+
+    <!-- Book Mockup Image Section -->
+    <section class="py-16 md:py-24 bg-gray-50 text-center">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold mb-8 section-title mx-auto" data-key="book_mockup_title">O Livro em Detalhes</h3>
+            <img src="Confiança_Invisível_Design_e_Conexões.jpg" alt="Mockup do Livro Confiança Invisível" class="mx-auto w-full max-w-md rounded-lg shadow-lg">
+        </div>
+    </section>
 
     <!-- Introduction Section -->
     <section class="py-16 md:py-24 bg-gray-50">
@@ -308,12 +316,12 @@
                     <img src="https://placehold.co/80x80/1A1F71/FFFFFF?text=JP" alt="João Pereira" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-[#0052CC]">
                     <p class="italic text-lg mb-4 text-gray-700" data-key="testimonial1_quote">"Um guia essencial para qualquer profissional de pagamentos. Vinicius descomplica temas complexos com maestria!"</p>
                     <p class="font-semibold text-md text-gray-800" data-key="testimonial1_author">João Pereira</p>
-                    <p class="text-sm text-gray-600" data-key="testimonial1_role">Head de Risco e Fraude, Fintech X</p>
+                    <p class="text-sm text-gray-600" data-key="testimonial1_role">Head de Risco e Fraude, Fintech</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-200">
                     <img src="https://placehold.co/80x80/0052CC/FFFFFF?text=AM" alt="Ana Maria" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-[#1A1F71]">
                     <p class="italic text-lg mb-4 text-gray-700" data-key="testimonial2_quote">"Leitura obrigatória para entender o futuro da identidade digital. Me ajudou a ver além do óbvio."</p>
-                    <p class="font-semibold text-md text-gray-800" data-key="testimonial2_author">Ana Maria</p>
+                    <p class="font-semibold text-md text-gray-800" data-key="testimonial2_author">Camila Santos</p>
                     <p class="text-sm text-gray-600" data-key="testimonial2_role">Gerente de Produto, E-commerce Líder</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-200">
@@ -381,6 +389,7 @@
                 hero_author: "Por Vinicius Teixeira",
                 hero_tagline: "Você vive na Era da Confiança Invisível. Você está preparado?",
                 hero_cta: "Adquira Seu Exemplar Agora",
+                book_mockup_title: "O Livro em Detalhes",
                 intro_title: "Desvende o Invisível que Move o Mundo Digital",
                 intro_paragraph: "Entre pagamentos digitais, identidades invisíveis e ameaças cibernéticas, as decisões que moldam o futuro acontecem longe dos olhos. Este livro é o seu guia para desvendar o que realmente acontece nos bastidores do mundo digital.",
                 for_whom_title: "Para Quem É Este Livro?",
@@ -446,6 +455,7 @@
                 hero_author: "By Vinicius Teixeira",
                 hero_tagline: "You live in the Era of Invisible Trust. Are you prepared?",
                 hero_cta: "Get Your Copy Now",
+                book_mockup_title: "The Book in Detail",
                 intro_title: "Unveil the Invisible that Moves the Digital World",
                 intro_paragraph: "Between digital payments, invisible identities, and cyber threats, the decisions that shape the future happen out of sight. This book is your guide to unravel what truly happens behind the scenes of the digital world.",
                 for_whom_title: "Who Is This Book For?",
@@ -511,6 +521,7 @@
                 hero_author: "Por Vinicius Teixeira",
                 hero_tagline: "¿Vives en la Era de la Confianza Invisible? ¿Estás preparado?",
                 hero_cta: "Adquiere Tu Ejemplar Ahora",
+                book_mockup_title: "El Libro en Detalle",
                 intro_title: "Desvela lo Invisible que Mueve el Mundo Digital",
                 intro_paragraph: "Entre pagos digitales, identidades invisibles y amenazas cibernéticas, las decisiones que dan forma al futuro ocurren lejos de la vista. Este libro es tu guía para desentrañar lo que realmente sucede detrás de escena del mundo digital.",
                 for_whom_title: "¿Para Quién Es Este Libro?",
@@ -532,20 +543,20 @@
                 chapter4_desc: "Explora las soluciones de autenticación (como 3DS, biometría y passkeys) que protegen sin obstaculizar.",
                 chapter5_title: "Datos Enriquecidos",
                 chapter5_desc: "Aprende cómo el análisis de datos y el aprendizaje automático están revolucionando la prevención del fraude.",
-                chapter6_title: "Regulación y Arquitetura de Seguridad",
-                chapter6_desc: "Comprende cómo las leyes y directrices dan forma a la innovación y cómo proteger la estructura invisible.",
+                chapter6_title: "Regulación y Arquitetura de Segurança",
+                chapter6_desc: "Comprende cómo las leyes y directrices dan forma a la innovación y cómo proteger la estructura invisível.",
                 chapter7_title: "El Nuevo Paradigma de Pagos",
-                chapter7_desc: "Descubre el futuro de la \"fricción zero\" y la \"confiança máxima\", donde los pagos se vuelven invisibles.",
+                chapter7_desc: "Descubre el futuro de la \"fricção zero\" e a \"confiança máxima\", donde los pagos se vuelven invisibles.",
                 chapter8_title: "Carreira y Oportunidades",
                 chapter8_desc: "Explora cómo ingresar o avanzar en el prometedor campo de los pagos digitales.",
-                transform_knowledge_title: "Transforma Tu Conocimiento, Optimiza Tus Decisiones",
+                transform_knowledge_title: "Transforma Tu Conocimento, Optimiza Tus Decisiones",
                 transform_knowledge_intro: "Este no es solo un libro para leer; es un libro para usar. Te ayudará a:",
                 transform_knowledge_point1: "Explicar claramente los riesgos y la seguridad a colegas y líderes.",
                 transform_knowledge_point2: "Mejorar productos y decisiones basándose en conceptos de autenticación inteligente.",
                 transform_knowledge_point3: "Inspirar presentaciones, proyectos y estrategias con ejemplos reales.",
                 transform_knowledge_point4: "Decidir tu próxima trayectoria profesional en el mercado de pagos.",
-                personalized_insight_title: "Obtén un Insight Personalizado del Libro ✨",
-                personalized_insight_intro: "Describe tu interés o un desafío que enfrentas en el mundo digital, y nuestro experto en IA (basado en el contenido del libro) generará un insight personalizado sobre cómo \"Confiança Invisible\" puede ayudarte.",
+                personalized_insight_title: "Obtén um Insight Personalizado del Libro ✨",
+                personalized_insight_intro: "Describe tu interés o un desafío que enfrentas en el mundo digital, y nuestro experto em IA (basado en el contenido del libro) generará um insight personalizado sobre cómo \"Confiança Invisible\" puede ayudarte.",
                 generate_insight_button: "Generar Insight ✨",
                 loading_message: "Generando tu insight...",
                 testimonials_title: "Lo Que Dicen Nuestros Leitores",
@@ -558,7 +569,7 @@
                 testimonial3_quote: "El libro Confiança Invisible es una verdadera brújula para navegar en el complejo mundo de los pagos digitales.",
                 testimonial3_author: "Ricardo Costa",
                 testimonial3_role: "Consultor de Ciberseguridad, Gran Banco",
-                quote: "\"La confianza es invisible, pero el impacto de tu conocimiento será visible.\"",
+                quote: "\"La confiança es invisível, pero el impacto de tu conocimiento será visible.\"",
                 about_author_title: "Sobre el Autor",
                 author_name: "Vinicius Teixeira",
                 author_bio: "Vinicius Teixeira es especialista en pagos digitales, autenticação, cibersegurança e identidade digital, con más de 15 años de experiencia en empresas como Visa, Mastercard y Worldpay. Actúa como mentor y conferencista, transformando el futuro de los pagos digitales con un enfoque en la confiança y la innovación.",

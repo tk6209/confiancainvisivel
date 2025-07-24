@@ -11,31 +11,34 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d0d0d; /* Very dark grey/almost black for visual identity */
-            color: #f0f0f0; /* Light grey for text */
+            background-color: #F2F4F7; /* Very light blue-grey, similar to document background */
+            color: #333333; /* Dark grey for text on light backgrounds */
             line-height: 1.6;
         }
         .container {
             max-width: 1200px;
         }
         .gradient-text {
-            background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+            /* Using two shades of Visa Blue for gradient */
+            background: linear-gradient(90deg, #1A1F71 0%, #0052CC 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .btn-primary {
-            background-image: linear-gradient(to right, #6a82fb 0%, #fc5c7d 100%);
+            /* Solid Visa Blue for buttons */
+            background-color: #1A1F71;
             transition: all 0.3s ease;
-            color: #FFFFFF; /* Ensure white text on buttons */
+            color: #FFFFFF; /* White text for buttons */
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(106, 130, 251, 0.4);
+            box-shadow: 0 4px 15px rgba(26, 31, 113, 0.4);
+            background-color: #0052CC; /* Brighter blue on hover */
         }
         .section-title {
             position: relative;
             padding-bottom: 1rem;
-            color: #f0f0f0; /* Ensure titles are light on dark background */
+            color: #1A1F71; /* Dark blue for titles */
         }
         .section-title::after {
             content: '';
@@ -45,60 +48,63 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: #fc5c7d; /* Pink/Red accent */
+            background-color: #0052CC; /* Brighter Visa Blue for accent line */
             border-radius: 2px;
         }
         details > summary {
             list-style: none; /* Remove default marker */
             cursor: pointer;
             padding: 1rem;
-            background-color: #1a1a1a; /* Darker background for summary */
+            background-color: #FFFFFF; /* White background for summary */
             border-radius: 0.5rem;
             margin-bottom: 0.5rem;
             transition: background-color 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            color: #f0f0f0; /* Light text for summary */
+            color: #333333; /* Dark text for summary */
+            border: 1px solid #E0E0E0; /* Light border */
         }
         details > summary::-webkit-details-marker {
             display: none; /* Hide marker for Webkit browsers */
         }
         details[open] > summary {
-            background-color: #2a2a2a; /* Slightly lighter when open */
+            background-color: #E6F0F8; /* Light blue when open */
         }
         details .chapter-content {
             padding: 1rem;
-            background-color: #242424; /* Content background */
+            background-color: #F2F4F7; /* Content background, matches body */
             border-radius: 0.5rem;
             margin-top: -0.25rem; /* Overlap slightly with summary */
             margin-bottom: 0.5rem;
+            border: 1px solid #E0E0E0; /* Light border */
+            border-top: none; /* No top border to blend with summary */
         }
         .promo-banner {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-image: linear-gradient(to right, #6a82fb 0%, #fc5c7d 100%); /* Blue to Pink/Red gradient */
+            background-color: #0052CC; /* Solid bright Visa Blue */
             color: #FFFFFF; /* White text for contrast */
             text-align: center;
             padding: 0.75rem 0;
             font-weight: bold;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         /* Language selector buttons */
         .language-selector button {
-            background-color: #333333; /* Dark grey for buttons */
-            color: #f0f0f0;
+            background-color: #1A1F71; /* Visa Blue */
+            color: #FFFFFF;
         }
         .language-selector button:hover {
-            background-color: #555555; /* Lighter grey on hover */
+            background-color: #0052CC; /* Brighter Visa Blue */
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Language Selector -->
-    <div class="flex justify-end p-4 bg-black shadow-sm language-selector">
+    <div class="flex justify-end p-4 bg-white shadow-sm language-selector">
         <button class="text-sm font-bold py-2 px-3 rounded-md mx-1 transition duration-200" onclick="setLanguage('pt')">PT</button>
         <button class="text-sm font-bold py-2 px-3 rounded-md mx-1 transition duration-200" onclick="setLanguage('en')">EN</button>
         <button class="text-sm font-bold py-2 px-3 rounded-md mx-1 transition duration-200" onclick="setLanguage('es')">ES</button>
@@ -110,10 +116,10 @@
     </div>
 
     <!-- Hero Section -->
-    <header class="relative bg-black text-white py-20 md:py-32 overflow-hidden shadow-md">
-        <div class="absolute inset-0 z-0 opacity-10">
-            <!-- Background pattern related to digital security -->
-            <img src="https://placehold.co/1920x1080/000000/FFFFFF?text=Digital+Security+Pattern" alt="Digital Security Pattern" class="w-full h-full object-cover">
+    <header class="relative bg-white text-gray-800 py-20 md:py-32 overflow-hidden shadow-md">
+        <div class="absolute inset-0 z-0 opacity-5">
+            <!-- Background pattern related to digital security - lighter version -->
+            <img src="https://placehold.co/1920x1080/FFFFFF/E0E0E0?text=Digital+Security+Pattern" alt="Digital Security Pattern" class="w-full h-full object-cover">
         </div>
         <div class="container mx-auto px-6 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
@@ -121,7 +127,7 @@
             </h1>
             <h2 class="text-2xl md:text-4xl font-semibold mb-6" data-key="hero_subtitle">O NOVO PARADIGMA DE RISCO</h2>
             <p class="text-lg md:text-xl mb-8" data-key="hero_author">Por Vinicius Teixeira</p>
-            <p class="text-xl md:text-2xl font-light mb-10 max-w-3xl mx-auto text-gray-200" data-key="hero_tagline">
+            <p class="text-xl md:text-2xl font-light mb-10 max-w-3xl mx-auto text-gray-600" data-key="hero_tagline">
                 Você vive na Era da Confiança Invisível. Você está preparado?
             </p>
             <a href="#buy-section" class="btn-primary inline-block font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition duration-300" data-key="hero_cta">
@@ -131,35 +137,35 @@
     </header>
 
     <!-- Introduction Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
+    <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-3xl md:text-4xl font-bold mb-8 section-title mx-auto" data-key="intro_title">Desvende o Invisível que Move o Mundo Digital</h3>
-            <p class="text-lg md:text-xl max-w-4xl mx-auto text-gray-300" data-key="intro_paragraph">
+            <p class="text-lg md:text-xl max-w-4xl mx-auto text-gray-700" data-key="intro_paragraph">
                 Entre pagamentos digitais, identidades invisíveis e ameaças cibernéticas, as decisões que moldam o futuro acontecem longe dos olhos. Este livro é o seu guia para desvendar o que realmente acontece nos bastidores do mundo digital.
             </p>
         </div>
     </section>
 
     <!-- For Whom Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
+    <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6">
             <h3 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title mx-auto" data-key="for_whom_title">Para Quem É Este Livro?</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
                     <h4 class="text-2xl font-bold mb-4 gradient-text" data-key="for_whom_curious_title">Iniciantes Curiosos</h4>
-                    <p class="text-md text-gray-300" data-key="for_whom_curious_desc">
+                    <p class="text-md text-gray-700" data-key="for_whom_curious_desc">
                         Se você deseja entender o invisível que move o ecossistema dos pagamentos, este será seu mapa inicial: simples, direto e acessível, com termos explicados, exemplos reais e glossário técnico ao final.
                     </p>
                 </div>
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
                     <h4 class="text-2xl font-bold mb-4 gradient-text" data-key="for_whom_professionals_title">Profissionais da Área</h4>
-                    <p class="text-md text-gray-300" data-key="for_whom_professionals_desc">
+                    <p class="text-md text-gray-700" data-key="for_whom_professionals_desc">
                         Se você já atua com pagamentos, risco, segurança ou tecnologia, ele servirá como um espelho estratégico para refinar sua visão, inspirar novas soluções ou fortalecer seus argumentos.
                     </p>
                 </div>
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
                     <h4 class="text-2xl font-bold mb-4 gradient-text" data-key="for_whom_leaders_title">Líderes e Tomadores de Decisão</h4>
-                    <p class="text-md text-gray-300" data-key="for_whom_leaders_desc">
+                    <p class="text-md text-gray-700" data-key="for_whom_leaders_desc">
                         Para aqueles que precisam proteger, inovar e crescer neste ecossistema sem abrir mão da experiência e da confiança.
                     </p>
                 </div>
@@ -168,75 +174,75 @@
     </section>
 
     <!-- What You Will Discover Section (with toggle buttons) -->
-    <section class="py-16 md:py-24 bg-gray-900">
+    <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6">
             <h3 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title mx-auto" data-key="discover_section_title">O Que Você Vai Descobrir em "Confiança Invisível"?</h3>
-            <p class="text-lg md:text-xl text-center mb-10 max-w-4xl mx-auto text-gray-300" data-key="discover_section_intro">
+            <p class="text-lg md:text-xl text-center mb-10 max-w-4xl mx-auto text-gray-700" data-key="discover_section_intro">
                 Prepare-se para uma jornada prática e inspiradora que irá transformar sua compreensão sobre o universo digital e a segurança.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-pink-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter1_title">Desvende o Ecossistema Invisível</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter1_desc">Entenda o que realmente acontece quando você passa um cartão e a complexidade por trás de cada transação.</p>
+                        <p class="text-base text-gray-700" data-key="chapter1_desc">Entenda o que realmente acontece quando você passa um cartão e a complexidade por trás de cada transação.</p>
                     </div>
                 </details>
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-blue-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter2_title">A Guerra Invisível Contra Fraudes</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter2_desc">Mergulhe nos bastidores da gestão de risco e prevenção à fraude, aprendendo sobre os tipos de fraude mais comuns.</p>
+                        <p class="text-base text-gray-700" data-key="chapter2_desc">Mergulhe nos bastidores da gestão de risco e prevenção à fraude, aprendendo sobre os tipos de fraude mais comuns.</p>
                     </div>
                 </details>
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-green-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter3_title">Identidade Digital</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter3_desc">Compreenda como a identidade digital se tornou o ativo mais valioso e vulnerável da nossa era.</p>
+                        <p class="text-base text-gray-700" data-key="chapter3_desc">Compreenda como a identidade digital se tornou o ativo mais valioso e vulnerável da nossa era.</p>
                     </div>
                 </details>
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-purple-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter4_title">A Arte de Autenticar</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter4_desc">Explore as soluções de autenticação (como 3DS, biometria e passkeys) que protegem sem travar.</p>
+                        <p class="text-base text-gray-700" data-key="chapter4_desc">Explore as soluções de autenticação (como 3DS, biometria e passkeys) que protegem sem travar.</p>
                     </div>
                 </details>
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-yellow-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter5_title">Dados Enriquecidos</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter5_desc">Saiba como a análise de dados e o machine learning estão revolucionando a prevenção de fraudes.</p>
+                        <p class="text-base text-gray-700" data-key="chapter5_desc">Saiba como a análise de dados e o machine learning estão revolucionando a prevenção de fraudes.</p>
                     </div>
                 </details>
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-red-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter6_title">Regulação e Arquitetura de Segurança</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter6_desc">Entenda como leis e diretrizes moldam a inovação e como proteger a estrutura invisível.</p>
+                        <p class="text-base text-gray-700" data-key="chapter6_desc">Entenda como leis e diretrizes moldam a inovação e como proteger a estrutura invisível.</p>
                     </div>
                 </details>
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-cyan-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter7_title">O Novo Paradigma dos Pagamentos</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter7_desc">Descubra o futuro da "fricção zero" e "confiança máxima", onde os pagamentos se tornam invisíveis.</p>
+                        <p class="text-base text-gray-700" data-key="chapter7_desc">Descubra o futuro da "fricção zero" e "confiança máxima", onde os pagamentos se tornam invisíveis.</p>
                     </div>
                 </details>
-                <details class="bg-gray-800 rounded-xl shadow-lg">
-                    <summary class="text-xl font-semibold text-white hover:text-orange-400">
+                <details class="bg-white rounded-xl shadow-lg border border-gray-200">
+                    <summary class="text-xl font-semibold text-gray-800 hover:text-[#1A1F71]">
                         <span data-key="chapter8_title">Carreira e Oportunidades</span>
                     </summary>
                     <div class="chapter-content">
-                        <p class="text-base text-gray-300" data-key="chapter8_desc">Explore como ingressar ou evoluir na promissora área de pagamentos digitais.</p>
+                        <p class="text-base text-gray-700" data-key="chapter8_desc">Explore como ingressar ou evoluir na promissora área de pagamentos digitais.</p>
                     </div>
                 </details>
             </div>
@@ -244,21 +250,21 @@
     </section>
 
     <!-- Personalized Insight Section (Gemini API Integration) -->
-    <section class="py-16 md:py-24 bg-gray-800">
+    <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-3xl md:text-4xl font-bold mb-8 section-title mx-auto" data-key="personalized_insight_title">Obtenha um Insight Personalizado do Livro ✨</h3>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300" data-key="personalized_insight_intro">
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-700" data-key="personalized_insight_intro">
                 Descreva seu interesse ou um desafio que você enfrenta no mundo digital, e nosso especialista em IA (baseado no conteúdo do livro) irá gerar um insight personalizado sobre como "Confiança Invisível" pode te ajudar.
             </p>
-            <div class="max-w-2xl mx-auto bg-gray-700 p-8 rounded-xl shadow-lg">
-                <textarea id="userInterest" class="w-full p-4 rounded-md bg-gray-600 text-white placeholder-gray-400 mb-4 focus:outline-none focus:ring-2 focus:ring-pink-400" rows="4" placeholder="Ex: 'Como posso proteger minha empresa contra fraudes de identidade?' ou 'Quero entender melhor o futuro dos pagamentos.'"></textarea>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                <textarea id="userInterest" class="w-full p-4 rounded-md bg-white text-gray-800 placeholder-gray-400 mb-4 focus:outline-none focus:ring-2 focus:ring-[#1A1F71] border border-gray-300" rows="4" placeholder="Ex: 'Como posso proteger minha empresa contra fraudes de identidade?' ou 'Quero entender melhor o futuro dos pagamentos.'"></textarea>
                 <button id="generateInsightBtn" class="btn-primary inline-block font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300" data-key="generate_insight_button">
                     Gerar Insight ✨
                 </button>
-                <div id="insightOutput" class="mt-6 p-4 bg-gray-600 rounded-md text-left text-lg italic hidden text-gray-200">
+                <div id="insightOutput" class="mt-6 p-4 bg-gray-100 rounded-md text-left text-lg italic hidden text-gray-800 border border-gray-200">
                     <!-- Personalized insight will be displayed here -->
                 </div>
-                <div id="loadingIndicator" class="mt-4 text-pink-400 hidden">
+                <div id="loadingIndicator" class="mt-4 text-[#1A1F71] hidden">
                     <p data-key="loading_message">Gerando seu insight...</p>
                 </div>
             </div>
@@ -266,62 +272,62 @@
     </section>
 
     <!-- Transform Your Knowledge Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
+    <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-3xl md:text-4xl font-bold mb-8 section-title mx-auto" data-key="transform_knowledge_title">Transforme Seu Conhecimento, Otimize Suas Decisões</h3>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-gray-300" data-key="transform_knowledge_intro">
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-gray-700" data-key="transform_knowledge_intro">
                 Este não é apenas um livro para ser lido; é um livro para ser usado. Ele te ajudará a:
             </p>
             <ul class="list-none space-y-4 max-w-2xl mx-auto text-left text-lg">
                 <li class="flex items-start">
-                    <span class="text-pink-400 mr-3 mt-1">✓</span>
-                    <p class="text-gray-300" data-key="transform_knowledge_point1">Explicar riscos e segurança de forma clara para colegas e colegas.</p>
+                    <span class="text-[#1A1F71] mr-3 mt-1">✓</span>
+                    <p class="text-gray-700" data-key="transform_knowledge_point1">Explicar riscos e segurança de forma clara para colegas e líderes.</p>
                 </li>
                 <li class="flex items-start">
-                    <span class="text-blue-400 mr-3 mt-1">✓</span>
-                    <p class="text-gray-300" data-key="transform_knowledge_point2">Aprimorar produtos e decisões com base em conceitos de autenticação inteligente.</p>
+                    <span class="text-[#1A1F71] mr-3 mt-1">✓</span>
+                    <p class="text-gray-700" data-key="transform_knowledge_point2">Aprimorar produtos e decisões com base em conceitos de autenticação inteligente.</p>
                 </li>
                 <li class="flex items-start">
-                    <span class="text-green-400 mr-3 mt-1">✓</span>
-                    <p class="text-gray-300" data-key="transform_knowledge_point3">Inspirar apresentações, projetos e estratégias com exemplos reais.</p>
+                    <span class="text-[#1A1F71] mr-3 mt-1">✓</span>
+                    <p class="text-gray-700" data-key="transform_knowledge_point3">Inspirar apresentações, projetos e estratégias com exemplos reais.</p>
                 </li>
                 <li class="flex items-start">
-                    <span class="text-purple-400 mr-3 mt-1">✓</span>
-                    <p class="text-gray-300" data-key="transform_knowledge_point4">Decidir sua próxima trilha profissional no mercado de pagamentos.</p>
+                    <span class="text-[#1A1F71] mr-3 mt-1">✓</span>
+                    <p class="text-gray-700" data-key="transform_knowledge_point4">Decidir sua próxima trilha profissional no mercado de pagamentos.</p>
                 </li>
             </ul>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 md:py-24 bg-gray-700">
+    <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-3xl md:text-4xl font-bold mb-12 section-title mx-auto" data-key="testimonials_title">O Que Nossos Leitores Estão Dizendo</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/fc5c7d/FFFFFF?text=JP" alt="João Pereira" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-pink-400">
-                    <p class="italic text-lg mb-4 text-gray-200" data-key="testimonial1_quote">"Um guia essencial para qualquer profissional de pagamentos. Vinicius descomplica temas complexos com maestria!"</p>
-                    <p class="font-semibold text-md text-gray-100" data-key="testimonial1_author">João Pereira</p>
-                    <p class="text-sm text-gray-400" data-key="testimonial1_role">Head de Risco e Fraude, Fintech X</p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-200">
+                    <img src="https://placehold.co/80x80/1A1F71/FFFFFF?text=JP" alt="João Pereira" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-[#0052CC]">
+                    <p class="italic text-lg mb-4 text-gray-700" data-key="testimonial1_quote">"Um guia essencial para qualquer profissional de pagamentos. Vinicius descomplica temas complexos com maestria!"</p>
+                    <p class="font-semibold text-md text-gray-800" data-key="testimonial1_author">João Pereira</p>
+                    <p class="text-sm text-gray-600" data-key="testimonial1_role">Head de Risco e Fraude, Fintech X</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/6a82fb/FFFFFF?text=AM" alt="Ana Maria" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-blue-400">
-                    <p class="italic text-lg mb-4 text-gray-200" data-key="testimonial2_quote">"Leitura obrigatória para entender o futuro da identidade digital. Me ajudou a ver além do óbvio."</p>
-                    <p class="font-semibold text-md text-gray-100" data-key="testimonial2_author">Ana Maria</p>
-                    <p class="text-sm text-gray-400" data-key="testimonial2_role">Gerente de Produto, E-commerce Líder</p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-200">
+                    <img src="https://placehold.co/80x80/0052CC/FFFFFF?text=AM" alt="Ana Maria" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-[#1A1F71]">
+                    <p class="italic text-lg mb-4 text-gray-700" data-key="testimonial2_quote">"Leitura obrigatória para entender o futuro da identidade digital. Me ajudou a ver além do óbvio."</p>
+                    <p class="font-semibold text-md text-gray-800" data-key="testimonial2_author">Ana Maria</p>
+                    <p class="text-sm text-gray-600" data-key="testimonial2_role">Gerente de Produto, E-commerce Líder</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/fc5c7d/FFFFFF?text=RC" alt="Ricardo Costa" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-pink-400">
-                    <p class="italic text-lg mb-4 text-gray-200" data-key="testimonial3_quote">"O livro Confiança Invisível é uma verdadeira bússola para navegar no complexo mundo dos pagamentos digitais."</p>
-                    <p class="font-semibold text-md text-gray-100" data-key="testimonial3_author">Ricardo Costa</p>
-                    <p class="text-sm text-gray-400" data-key="testimonial3_role">Consultor de Cibersegurança, Grande Banco</p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-200">
+                    <img src="https://placehold.co/80x80/1A1F71/FFFFFF?text=RC" alt="Ricardo Costa" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-[#0052CC]">
+                    <p class="italic text-lg mb-4 text-gray-700" data-key="testimonial3_quote">"O livro Confiança Invisível é uma verdadeira bússola para navegar no complexo mundo dos pagamentos digitais."</p>
+                    <p class="font-semibold text-md text-gray-800" data-key="testimonial3_author">Ricardo Costa</p>
+                    <p class="text-sm text-gray-600" data-key="testimonial3_role">Consultor de Cibersegurança, Grande Banco</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Quote Section -->
-    <section class="py-16 md:py-24 bg-black text-center">
+    <section class="py-16 md:py-24 bg-gray-50 text-center">
         <div class="container mx-auto px-6">
             <p class="text-3xl md:text-5xl font-extrabold italic leading-tight max-w-5xl mx-auto gradient-text" data-key="quote">
                 "A confiança é invisível - mas o impacto do seu conhecimento será visível."
@@ -330,14 +336,14 @@
     </section>
 
     <!-- About the Author Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
+    <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-3xl md:text-4xl font-bold mb-8 section-title mx-auto" data-key="about_author_title">Sobre o Autor</h3>
-            <div class="flex flex-col md:flex-row items-center justify-center max-w-4xl mx-auto bg-gray-800 p-8 rounded-xl shadow-lg">
-                <img src="https://placehold.co/150x150/6a82fb/FFFFFF?text=Vinicius+Teixeira" alt="Vinicius Teixeira" class="w-36 h-36 rounded-full object-cover mb-6 md:mb-0 md:mr-8 border-4 border-pink-400">
+            <div class="flex flex-col md:flex-row items-center justify-center max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                <img src="https://placehold.co/150x150/1A1F71/FFFFFF?text=Vinicius+Teixeira" alt="Vinicius Teixeira" class="w-36 h-36 rounded-full object-cover mb-6 md:mb-0 md:mr-8 border-4 border-[#0052CC]">
                 <div class="text-left">
                     <h4 class="text-2xl font-bold mb-3 gradient-text" data-key="author_name">Vinicius Teixeira</h4>
-                    <p class="text-lg text-gray-300" data-key="author_bio">
+                    <p class="text-lg text-gray-700" data-key="author_bio">
                         Vinicius Teixeira é especialista em pagamentos digitais, autenticação, cibersegurança e identidade digital, com mais de 15 anos de experiência em empresas como Visa, Mastercard e Worldpay. Atua como mentor e palestrante, transformando o futuro dos pagamentos digitais com foco em confiança e inovação.
                     </p>
                 </div>
@@ -346,10 +352,10 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section id="buy-section" class="py-16 md:py-24 bg-gray-800 text-center">
+    <section id="buy-section" class="py-16 md:py-24 bg-gray-50 text-center">
         <div class="container mx-auto px-6">
             <h3 class="text-3xl md:text-4xl font-bold mb-8" data-key="cta_bottom_title">Não espere o futuro chegar. Construa-o.</h3>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-300" data-key="cta_bottom_paragraph">
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-700" data-key="cta_bottom_paragraph">
                 Adquira agora o seu exemplar de "Confiança Invisível" e torne-se um guardião invisível da confiança digital!
             </p>
             <a href="#" class="btn-primary inline-block font-bold py-5 px-12 rounded-full shadow-xl hover:shadow-2xl transition duration-300 text-xl" data-key="cta_bottom_button">
@@ -359,10 +365,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-10 text-center text-gray-500 text-sm">
+    <footer class="bg-gray-800 py-10 text-center text-gray-300 text-sm">
         <div class="container mx-auto px-6">
             <p data-key="footer_copyright">Copyrights Vinicius Teixeira 2025</p>
-            <p class="mt-2" data-key="footer_connect">Conecte-se com o autor: <a href="https://www.linkedin.com/in/viniciuseteixeira" target="_blank" class="text-blue-400 hover:underline" data-key="footer_linkedin_text">https://www.linkedin.com/in/viniciuseteixeira</a></p>
+            <p class="mt-2" data-key="footer_connect">Conecte-se com o autor: <a href="https://www.linkedin.com/in/viniciuseteixeira" target="_blank" class="text-[#0052CC] hover:underline" data-key="footer_linkedin_text">https://www.linkedin.com/in/viniciuseteixeira</a></p>
         </div>
     </footer>
 
@@ -526,13 +532,13 @@
                 chapter4_desc: "Explora las soluciones de autenticación (como 3DS, biometría y passkeys) que protegen sin obstaculizar.",
                 chapter5_title: "Datos Enriquecidos",
                 chapter5_desc: "Aprende cómo el análisis de datos y el aprendizaje automático están revolucionando la prevención del fraude.",
-                chapter6_title: "Regulación y Arquitetura de Segurança",
-                chapter6_desc: "Comprende cómo las leyes y directrices dan forma a la innovación y cómo proteger la estructura invisível.",
+                chapter6_title: "Regulación y Arquitetura de Seguridad",
+                chapter6_desc: "Comprende cómo las leyes y directrices dan forma a la innovación y cómo proteger la estructura invisible.",
                 chapter7_title: "El Nuevo Paradigma de Pagos",
                 chapter7_desc: "Descubre el futuro de la \"fricción zero\" y la \"confiança máxima\", donde los pagos se vuelven invisibles.",
                 chapter8_title: "Carreira y Oportunidades",
                 chapter8_desc: "Explora cómo ingresar o avanzar en el prometedor campo de los pagos digitales.",
-                transform_knowledge_title: "Transforma Tu Conocimento, Optimiza Tus Decisiones",
+                transform_knowledge_title: "Transforma Tu Conocimiento, Optimiza Tus Decisiones",
                 transform_knowledge_intro: "Este no es solo un libro para leer; es un libro para usar. Te ayudará a:",
                 transform_knowledge_point1: "Explicar claramente los riesgos y la seguridad a colegas y líderes.",
                 transform_knowledge_point2: "Mejorar productos y decisiones basándose en conceptos de autenticación inteligente.",
@@ -552,7 +558,7 @@
                 testimonial3_quote: "El libro Confiança Invisible es una verdadera brújula para navegar en el complejo mundo de los pagos digitales.",
                 testimonial3_author: "Ricardo Costa",
                 testimonial3_role: "Consultor de Ciberseguridad, Gran Banco",
-                quote: "\"La confiança es invisível, pero el impacto de tu conocimiento será visible.\"",
+                quote: "\"La confianza es invisible, pero el impacto de tu conocimiento será visible.\"",
                 about_author_title: "Sobre el Autor",
                 author_name: "Vinicius Teixeira",
                 author_bio: "Vinicius Teixeira es especialista en pagos digitales, autenticação, cibersegurança e identidade digital, con más de 15 años de experiencia en empresas como Visa, Mastercard y Worldpay. Actúa como mentor y conferencista, transformando el futuro de los pagos digitales con un enfoque en la confiança y la innovación.",

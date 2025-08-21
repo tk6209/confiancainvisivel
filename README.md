@@ -46,7 +46,7 @@ Google Gemini API: Geração de insights personalizados com IA.
 
 ▶️ Como Visualizar
 Clone o repositório:
-git clone https://github.com/seuusuario/confianca-invisivel.git
+git clone https://github.com/seuusuario/confiancainvisivel.git
 Abra o arquivo index.html em qualquer navegador.
 ####
 
